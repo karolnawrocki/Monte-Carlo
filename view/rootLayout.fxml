@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MonteCarlo.view.RootLayoutController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="819.0" layoutY="115.0" text="Number of points:" textAlignment="RIGHT">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Canvas fx:id="canvas" height="750.0" width="750.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <TextField fx:id="numberOfPointsField" layoutX="938.0" layoutY="111.0" prefHeight="25.0" prefWidth="87.0" text="5000000" />
+            <Button layoutX="816.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleRunButtonAction" text="RUN" />
+          <Button layoutX="879.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleStopButtonAction" text="STOP" />
+            <ProgressBar fx:id="progressBar" layoutX="816.0" layoutY="147.0" prefHeight="18.0" prefWidth="216.0" progress="0.0" />
+            <Label fx:id="calculatedAreaLabel" layoutX="816.0" layoutY="216.0" text="Calculated area: -" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
